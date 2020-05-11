@@ -3,7 +3,7 @@ Basic react app to be used as a damage calculator. Soon to be hosted at cycalc.d
 ##To Do (ordered):
 
  * ~~Sketch and brainstorm possible layouts.~~
- * ~~Create project and crude mock-up.~~~~
+ * ~~Create project and crude mock-up.~~
  * ~~Make website fully responsive and test on multiple screen sizes~~
  * Refine mock-up to closer represent the final website. **[In progress]**
  * Finish general mock-up of the site.
