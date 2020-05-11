@@ -1,0 +1,522 @@
+html, body, #root {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+* {
+    background: transparent;
+    background-color: transparent;
+}
+
+*:hover {
+    background: transparent;
+    background-color: transparent;
+}
+
+.card {
+    box-shadow: none;
+    /* border-radius: 0rem; */
+}
+
+.card-header {
+
+    z-index: 4;
+}
+
+.backgroundDiv {
+    all: unset;
+
+    position: fixed; 
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: "";
+    z-index: -99;
+    background-image: url("../images/darkmode_large_compressed.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+}
+
+.shadow-top-outer
+{
+    box-shadow: inset 0 9px 5px -3px rgba(0,0,0,0.2);
+}
+.shadow-left-outer
+{
+    box-shadow: inset -9px 0 5px -3px rgba(0,0,0,0.2);
+}
+.shadow-right-outer
+{
+    box-shadow: inset -9px 0px 5px -3px rgba(0,0,0,0.2);
+}
+.shadow-bottom-outer
+{
+    box-shadow: inset 0 -9px 5px -3px rgba(0,0,0,0.2);
+}
+
+.shadow-main-inner {
+    box-shadow: 
+        inset 0 9px 5px -3px rgba(0,0,0,0.2),
+        inset -9px 0 5px -3px rgba(0,0,0,0.2),
+        inset 9px 0px 5px -3px rgba(0,0,0,0.2),
+        inset 0 -9px 5px -3px rgba(0,0,0,0.2);
+}
+
+.shadow-main-outer {
+    -webkit-box-shadow: 0 20px 10px -6px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 20px 10px -6px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 10px -6px rgba(0,0,0,0.4);
+    
+    overflow:visible;
+}
+
+
+.top-left {
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    bottom: 5rem; 
+    right: 1rem;
+    left: 1rem;
+
+    z-index: 5;
+}
+
+.top-left-starter {
+    background-color: seagreen;
+    position: sticky !important;
+    margin-bottom: -1rem;
+    border-radius: 0.5rem;
+    border-bottom-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    top: 0rem !important;
+
+    z-index: 2;
+    box-shadow: inset 0 9px 5px -3px rgba(0,0,0,0.2);;
+    min-height: 1rem;
+}
+
+.top-left-capper {
+    background-color: seagreen;
+    position: sticky !important;
+    margin-top: -1rem;
+    border-radius: 0.5rem;
+    border-top-right-radius: 0rem;
+    border-top-left-radius: 0rem;
+    bottom: 0rem !important;
+
+    z-index: 1;
+    box-shadow: 0 -9px 5px -3px rgba(0,0,0,0.2);
+    min-height: 1rem;
+}
+
+.bottom-left {
+    border-radius: 0.5rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+
+    position: absolute;
+    bottom: 1rem; 
+    right: 1rem;
+    left: 1rem;
+
+    z-index: 3;
+}
+
+
+.top-right {
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    bottom: 5rem; 
+    right: 1rem;
+    left: 1rem;
+
+    z-index: 5;
+}
+
+.bottom-right {
+    border-radius: 0.5rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+
+    position: absolute;
+    bottom: 1rem; 
+    right: 1rem;
+    left: 1rem;
+
+    z-index: 3;
+}
+
+
+
+
+
+.build-header {
+    z-index: 3;
+}
+
+/* CSS for blur and darkening effect */
+
+.dark-color {
+    position: relative;
+    overflow: hidden !important;
+    background: transparent !important;
+}
+
+.dark-color:before {
+    /* Blur without blured edges provided by Ana Tudor at https://css-tricks.com/blurred-borders-in-css/ . 
+    Thank you Anna, I love you. 
+    I have been dealing with this shit for 4 hours and have no idea how your css worked but mine didn't. 
+    What a fucking css godess. */
+    position: absolute;
+    z-index: -1;
+    top: -1.5rem;
+    right: -1.5rem;
+    bottom:-1.5rem;
+    left: -1.5rem;
+    border: inherit;
+    border-color: transparent;
+    background: linear-gradient(rgba(0,0,0,0.34),rgba(0,0,0,0.34)), url(../images/darkmode_large_compressed.png) 50%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    background-clip: border-box;
+    -webkit-filter: blur(6px);
+    filter: blur(6px);
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0);
+    content: "";
+}
+
+.darker-color {
+    position: relative;
+    overflow: hidden !important;
+    background: transparent !important;
+}
+
+.darker-color:before {
+    /* Blur without blured edges provided by Ana Tudor at https://css-tricks.com/blurred-borders-in-css/ . 
+    Thank you Anna, I love you. 
+    I have been dealing with this shit for 4 hours and have no idea how your css worked but mine didn't. 
+    What a fucking css godess. */
+    position: absolute;
+    z-index: -1;
+    top: -1.5rem;
+    right: -1.5rem;
+    bottom:-1.5rem;
+    left: -1.5rem;
+    border: inherit;
+    border-color: transparent;
+    background: linear-gradient(rgba(0,0,0,0.51),rgba(0,0,0,0.51)), url(../images/darkmode_large_compressed.png) 50%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    background-clip: border-box;
+    -webkit-filter: blur(9px);
+    filter: blur(9px);
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0);
+    content: "";
+}
+
+.darker-color-accordian {
+    position: relative;
+    overflow: hidden !important;
+    background: transparent !important;
+
+    /* Extras for inner accordians because react-bootstrap sucks :P */
+    box-shadow: 
+        inset 0 9px 5px -3px rgba(0,0,0,0.2),
+        inset 0 -9px 5px -3px rgba(0,0,0,0.2);
+}
+
+.darker-color-accordian:before {
+    /* Blur without blured edges provided by Ana Tudor at https://css-tricks.com/blurred-borders-in-css/ . 
+    Thank you Anna, I love you. 
+    I have been dealing with this shit for 4 hours and have no idea how your css worked but mine didn't. 
+    What a fucking css godess. */
+    position: absolute;
+    z-index: -1;
+    top: -1.5rem;
+    right: -1.5rem;
+    bottom:-1.5rem;
+    left: -1.5rem;
+    border: inherit;
+    border-color: transparent;
+    background: linear-gradient(rgba(0,0,0,0.51),rgba(0,0,0,0.51)), url(../images/darkmode_large_compressed.png) 50%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    background-clip: border-box;
+    -webkit-filter: blur(9px);
+    filter: blur(9px);
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0);
+    content: "";
+}
+
+.darkest-color {
+    position: relative;
+    overflow: hidden !important;
+    background: transparent !important;
+    
+}
+
+.darkest-color:before {
+    /* Blur without blured edges provided by Ana Tudor at https://css-tricks.com/blurred-borders-in-css/ . 
+    Thank you Anna, I love you. 
+    I have been dealing with this shit for 4 hours and have no idea how your css worked but mine didn't. 
+    What a fucking css godess. */
+    position: absolute;
+    z-index: -1;
+    top: -5rem;
+    right: -5rem;
+    bottom:-5rem;
+    left: -5rem;
+    border: inherit;
+    border-color: transparent;
+    background: linear-gradient(rgba(0,0,0,0.76),rgba(0,0,0,0.76)), url(../images/darkmode_large_compressed.png) 50%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    background-clip: border-box;
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0);
+    content: "";
+}
+
+
+.no-color {
+    background-color: rgba(0,0,0,0);
+    background: rgba(0,0,0,0);
+    box-shadow: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    /* here copy default .btn class styles */
+    background: transparent !important;
+    background-color: transparent !important;
+    /* or something like that */
+}
+
+.hide-scroll {
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+    display: none !important;
+}
+
+.hide-scroll-accordian {
+    overflow: visible;
+    scrollbar-width: none;
+    
+    -webkit-box-shadow: 0 20px 10px -6px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 20px 10px -6px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 10px -6px rgba(0,0,0,0.6);
+
+    z-index: 3;
+}
+
+.hide-scroll-accordian::-webkit-scrollbar {
+    display: none !important;
+}
+
+.surpress-scroll {
+    overflow: hidden
+}
+
+.color {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 2px;
+    background: red;
+}
+
+.swatch {
+    padding: 3px;
+    background: #fff;
+    border-radius: 1px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.color-picker {
+    padding: 1rem
+}
+
+.disabled-item {
+    opacity: 50%;
+}
+/* Change the colors of the arrows in popovers to fit the theme: */
+
+
+.click-me {
+    cursor: pointer;
+}
+
+.dont-click-me {
+    cursor: not-allowed;
+}
+
+
+.image-icon-sizer {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    -webkit-filter: brightness(0) invert(1);
+
+    outline: 0.1875rem solid rgba(1,1,1, 0.2);
+    margin-bottom: 1rem;
+}
+
+.scroll_content {
+    position: relative;
+    width: 400px;
+    height: 414px;
+    top: -17px;
+    padding: 20px 10px 20px 10px;
+    overflow-y: auto;
+}
+
+.item-text-resize {
+    text-align: center;
+    font-size: 0.925rem;
+    font-weight: normal;
+}
+
+.item-sizer {
+    max-width: 20% !important;
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.item-main-breather {
+    margin-right: 2rem;
+}
+
+.dynamic-hide {
+    display: default;
+}
+
+@media (max-width: 1418.98px) {
+    .item-text-resize {
+        font-size: 0.825rem;
+    }
+
+    .item-main-breather {
+        margin-right: 0.5rem;
+    }
+
+    .item-sizer {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+@media (max-width: 1198.98px) {
+    .item-text-resize {
+        font-size: 0.75rem;
+    }
+
+    .item-sizer {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .item-main-breather {
+        margin-right: 0rem;
+    }
+
+    .image-icon-sizer {
+        outline: 0.125rem solid rgba(1,1,1, 0.2);
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .item-text-resize {
+        font-size: 1rem;
+    }
+
+    .item-main-breather {
+        margin-right: 2rem;
+    }
+
+
+    .dynamic-hide {
+        display: none;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .item-text-resize {
+        font-size: 0.75rem;
+    }
+
+    .item-main-breather {
+        margin-right: 1rem;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .item-text-resize {
+        font-size: 0.625rem;
+    }
+
+    .item-main-breather {
+        margin-right: 0rem;
+    }
+}
+
+
+
+
+.hidden-graph-button {
+    display: default;
+}
+
+@media(min-width: 992px){
+    .hidden-graph-button {
+        display: none;
+    }
+
+    .top-left {
+        right: calc(50vw + 0.5rem);
+    }
+    
+    .bottom-left {
+        right: calc(50vw + 0.5rem);
+    }
+
+    .top-right {
+        left: calc(50vw + 0.5em);
+    }
+    
+    .bottom-right {
+        left: calc(50vw + 0.5rem);
+    }
+}
